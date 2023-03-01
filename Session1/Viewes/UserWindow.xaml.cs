@@ -22,22 +22,13 @@ namespace Session1.Viewes
     {
         Users user;
         List<Users> users = new List<Users>();
+        List<Roles> roleses = new List<Roles>();
+        List<Offices> officeses = new List<Offices>();
         public UserWindow(Users sended)
         {
             InitializeComponent();
             sended = user;
-            Fill();
         }
-        public void Fill(bool Reupload_List = true)
-        {
-            if (Reupload_List != false)
-            {
-                users.Clear();
-                users = new DataConnect().GetUsers();
-            }
-            Data_User.ItemsSource = users;
-            roles = new Connect().GetRole();
-            ChangeRole.ItemsSource = roles;
-        }
+
     }
 }

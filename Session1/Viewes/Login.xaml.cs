@@ -38,7 +38,7 @@ namespace Session1.Viewes
             List<Users> users = new DataConnect().GetUsers();
             foreach (Users user in users)
             {
-                if (UserName.Text == user.Email && Password.Password == user.Password && attempt <= 3)
+                if (UserName.Text == user.Email && Password.Password == user.Password && attempt < 3)
                 {
                     switch (user.RoleID)
                     {
@@ -60,19 +60,19 @@ namespace Session1.Viewes
                             break;
                     }
                 }
-                else
-                {
-                    attempt += 1;
-                    if (attempt >= 4)
-                    {
-                        DispatcherTimer dt = new DispatcherTimer();
-                        dt.Interval = TimeSpan.FromSeconds(1);
-                        dt.Tick += dtTicker;
-                        dt.Start();
-                        login_btn.IsEnabled = false;
-                    }
-                    break;
-                }
+                //else
+                //{
+                //    //attempt += 1;
+                //    //if (attempt >= 4)
+                //    //{
+                //    //    DispatcherTimer dt = new DispatcherTimer();
+                //    //    dt.Interval = TimeSpan.FromSeconds(1);
+                //    //    dt.Tick += dtTicker;
+                //    //    dt.Start();
+                //    //    login_btn.IsEnabled = false;
+                //    //}
+                //    break;
+                //}
             }
         }
         private void Exit_Button(object sender, RoutedEventArgs e)

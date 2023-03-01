@@ -6,5 +6,87 @@
         xmlns:local="clr-namespace:Session1.Viewes"
         mc:Ignorable="d"
         Title="AdminPanelWindow" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <ListView x:Name="Data_User" HorizontalAlignment="Left" Height="299" Margin="64,74,0,0" VerticalAlignment="Top" Width="657" Background="White">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}" Width="100" >Name</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}" Width="100">Last name</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Birthdate}" Width="50">Age</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=RoleID}" Width="100">User Role</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Email}" Width="200">Email Address</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=OfficeID}" Width="100">Office</GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=FirstName , StringFormat=' {0}' }"  Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=LastName , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=Birthdate , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=RoleID , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=Email , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=OfficeID , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Add user" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="75" Background="White" Foreground="Black" BorderBrush="White" Click="Button_Click_1"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="90,5,0,0" VerticalAlignment="Top" Width="63" Background="White" Foreground="Black" BorderBrush="White" Click="Exit_Button"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="0,30,0,0" VerticalAlignment="Top" Width="792" Background="Black"/>
+        <Label Content="Office" HorizontalAlignment="Left" Margin="64,41,0,0" VerticalAlignment="Top" Width="41"/>
+        <ComboBox HorizontalAlignment="Left" Margin="110,41,0,0" VerticalAlignment="Top" Width="120" BorderBrush="#FF9E9E9E"/>
+        <Button Content="Change Role" HorizontalAlignment="Left" Margin="64,382,0,0" VerticalAlignment="Top" Width="75" Background="White" Foreground="Black" BorderBrush="Black"/>
+        <Button Content="Enable/Disable Login" HorizontalAlignment="Left" Margin="177,382,0,0" VerticalAlignment="Top" Width="119" Background="White" Foreground="Black" BorderBrush="Black" Click="Button_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="22,224,0,0" VerticalAlignment="Top" Width="292" Background="Black" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.988"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="121,224,0,0" VerticalAlignment="Top" Width="292" Background="Black" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.988"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="173,224,0,0" VerticalAlignment="Top" Width="292" Background="Black" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.988"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="270,223,0,0" VerticalAlignment="Top" Width="294" Background="Black" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.988"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="471,224,0,0" VerticalAlignment="Top" Width="292" Background="Black" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.988"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+    </Grid>
 </Window>

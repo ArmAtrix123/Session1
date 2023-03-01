@@ -22,23 +22,43 @@ namespace Session1.Viewes
     {
         Users user;
         List<Users> users = new List<Users>();
+        List<Roles> roleses = new List<Roles>();
+        List<Offices> officeses = new List<Offices>();
         public AdminPanelWindow(Users sended)
         {
             InitializeComponent();
             sended = user;
-            // Fill();
+            Fill();
         }
-
         public void Fill(bool Reupload_List = true)
         {
-            //if (Reupload_List != false)
-            //{
-            //    dogovors.Clear();
-            //    dogovors = new Connect().GetDogovor();
-            //}
-            //Data_Dogovor.ItemsSource = dogovors;
-            //rezumes = new Connect().GetRezume();
-            //ChangeRezume.ItemsSource = rezumes;
+            if (Reupload_List != false)
+            {
+                users.Clear();
+                users = new DataConnect().GetUsers();
+            }
+            Data_User.ItemsSource = users;
+            roleses = new DataConnect().GetRoles();
+            officeses = new DataConnect().GetOffices();
+        }
+
+        private void Exit_Button(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Add_User a1 = new Add_User(user);
+            a1.Top = this.Top;
+            a1.Left = this.Left;
+            this.Hide();
+            a1.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

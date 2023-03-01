@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session1.Classes
 {
-    class Roles
+    public class Roles
     {
         public int ID { get; set; }
         public string Title { get; set; }
@@ -14,6 +14,10 @@ namespace Session1.Classes
         {
             ID = id;
             Title = title;
+        }
+        public Roles()
+        {
+
         }
     }
 

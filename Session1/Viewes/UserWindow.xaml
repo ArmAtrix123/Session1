@@ -7,19 +7,6 @@
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="Data_User" HorizontalAlignment="Left" Height="299" Margin="174,120,0,0" VerticalAlignment="Top" Width="401" SelectionChanged="Data_Type_SelectionChanged">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding Path=FirstName , StringFormat='Имя: {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=LastName , StringFormat='Фамилия: {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=Birthdate , StringFormat='Возраст: {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=RoleID , StringFormat='User Role: {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=Email , StringFormat='Почта: {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=OfficeID , StringFormat='Оффис: {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        
     </Grid>
 </Window>

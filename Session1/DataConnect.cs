@@ -63,6 +63,12 @@ namespace Session1
                 return users;
             }
         }
+        public void Add_User(Users user)
+        {
+            string command = "USE Session1 " +
+                $"EXEC [dbo].[AddUser] '2','{user.Email}','{user.Password}','{user.FirstName}','{user.LastName}','{user.OfficeID}','{user.Birthdate}','1';";
+            SqlCommand(command);
+        }
         public List<Countries> GetCountries()
         {
             string command = "USE Session1 " +
@@ -85,11 +91,11 @@ namespace Session1
                 return counts;
             }
         }
-        public List<Countries> GetOffices()
+        public List<Offices> GetOffices()
         {
             string command = "USE Session1 " +
                 "select * from [Offices]";
-            List<Offices> offices = new List<Offices>();
+            List<Offices> offs = new List<Offices>();
             using (SqlConnection conn
                 = new SqlConnection(ConnectionString))
             {
@@ -103,12 +109,35 @@ namespace Session1
                     off.Title = reader.GetString(2);
                     off.Phone = reader.GetString(3);
                     off.Contact = reader.GetString(4);
-                    offices.Add(off);
+                    offs.Add(off);
                 }
                 reader.Close();
                 conn.Close();
-                return offices;
+                return offs;
             }
         }
+        public List<Roles> GetRoles()
+        {
+            string command = "USE Session1 " +
+                "select * from [Roles]";
+            List<Roles> rols = new List<Roles>();
+            using (SqlConnection conn
+                = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                SqlDataReader reader = new SqlCommand(command, conn).ExecuteReader();
+                while (reader.Read())
+                {
+                    Roles role = new Roles();
+                    role.ID = reader.GetInt32(0);
+                    role.Title = reader.GetString(1);
+                    rols.Add(role);
+                }
+                reader.Close();
+                conn.Close();
+                return rols;
+            }
+        }
+
     }
 }
