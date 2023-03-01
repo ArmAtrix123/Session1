@@ -63,5 +63,52 @@ namespace Session1
                 return users;
             }
         }
+        public List<Countries> GetCountries()
+        {
+            string command = "USE Session1 " +
+                "select * from [Countries]";
+            List<Countries> counts = new List<Countries>();
+            using (SqlConnection conn
+                = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                SqlDataReader reader = new SqlCommand(command, conn).ExecuteReader();
+                while (reader.Read())
+                {
+                    Countries count = new Countries();
+                    count.ID = reader.GetInt32(0);
+                    count.Name = reader.GetString(1);
+                    counts.Add(count);
+                }
+                reader.Close();
+                conn.Close();
+                return counts;
+            }
+        }
+        public List<Countries> GetOffices()
+        {
+            string command = "USE Session1 " +
+                "select * from [Offices]";
+            List<Offices> offices = new List<Offices>();
+            using (SqlConnection conn
+                = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                SqlDataReader reader = new SqlCommand(command, conn).ExecuteReader();
+                while (reader.Read())
+                {
+                    Offices off = new Offices();
+                    off.ID = reader.GetInt32(0);
+                    off.CountryID = reader.GetInt32(1);
+                    off.Title = reader.GetString(2);
+                    off.Phone = reader.GetString(3);
+                    off.Contact = reader.GetString(4);
+                    offices.Add(off);
+                }
+                reader.Close();
+                conn.Close();
+                return offices;
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session1.Classes
 {
-    class Offices
+    public class Offices
     {
         public int ID { get; set; }
         public int CountryID { get; set; }
@@ -22,6 +22,10 @@ namespace Session1.Classes
             Title = title;
             Phone = phone;
             Contact = contact;
+        }
+        public Offices()
+        {
+
         }
     }
 }

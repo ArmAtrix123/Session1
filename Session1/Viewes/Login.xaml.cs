@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -32,7 +33,7 @@ namespace Session1.Viewes
             seconds--;
             lblTime.Content = seconds.ToString();
         }
-        private void Login_Button(object sender, RoutedEventArgs e)
+        public void Login_Button(object sender, RoutedEventArgs e)
         {
             List<Users> users = new DataConnect().GetUsers();
             foreach (Users user in users)
@@ -69,10 +70,6 @@ namespace Session1.Viewes
                         dt.Tick += dtTicker;
                         dt.Start();
                         login_btn.IsEnabled = false;
-                        if (seconds == 1)
-                        {
-                            dt.Stop();
-                        }
                     }
                     break;
                 }
