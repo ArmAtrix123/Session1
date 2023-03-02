@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="63" Background="White" Foreground="Black" BorderBrush="White" Click="Exit_Button"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="0,30,0,0" VerticalAlignment="Top" Width="792" Background="Black"/>
+        <Label Content="Hi" HorizontalAlignment="Left" Margin="35,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="61,45,0,0" VerticalAlignment="Top" Width="43"/>
+        <Label Content=", Welcome to AMONIC Airlines" HorizontalAlignment="Left" Margin="109,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Time spent on system :" HorizontalAlignment="Left" Margin="257,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="393,76,0,0" VerticalAlignment="Top" Width="43"/>
+        <Label Content="Number of crashes:" HorizontalAlignment="Left" Margin="502,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="633,76,0,0" VerticalAlignment="Top" Width="43"/>
+
     </Grid>
 </Window>

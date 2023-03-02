@@ -1,5 +1,4 @@
-﻿using Session1.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,20 +15,13 @@ using System.Windows.Shapes;
 namespace Session1.Viewes
 {
     /// <summary>
-    /// Логика взаимодействия для UserWindow.xaml
+    /// Логика взаимодействия для Edit_Role.xaml
     /// </summary>
-    public partial class UserWindow : Window
+    public partial class Edit_Role : Window
     {
-        Users user;
-        public UserWindow(Users sended)
+        public Edit_Role()
         {
             InitializeComponent();
-            sended = user;
-        }
-
-        private void Exit_Button(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
     }
 }
