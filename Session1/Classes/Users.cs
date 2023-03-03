@@ -17,6 +17,8 @@ namespace Session1.Classes
         public int OfficeID { get; set; }
         public DateTime Birthdate { get; set; }
         public bool Active { get; set; }
+        public string Office { get; set; }
+        public string Role { get; set; }
         public Users(int id, int roleID, string email, string password, string firstName, string lastName, int officeID, DateTime birthdate, bool active)
         {
             ID = id;
@@ -28,6 +30,7 @@ namespace Session1.Classes
             OfficeID = officeID;
             Birthdate = birthdate;
             Active = active;
+
         }
         public Users()
         {

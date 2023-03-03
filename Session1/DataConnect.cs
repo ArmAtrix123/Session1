@@ -56,6 +56,13 @@ namespace Session1
                     user.OfficeID = reader.GetInt32(6);
                     user.Birthdate = reader.GetDateTime(7);
                     user.Active = reader.GetBoolean(8);
+                    if (user.OfficeID == 1) user.Office = "Abu Dhabi";
+                    if (user.OfficeID == 3) user.Office = "Cairo";
+                    if (user.OfficeID == 4) user.Office = "Bahrain";
+                    if (user.OfficeID == 5) user.Office = "Doha";
+                    if (user.OfficeID == 6) user.Office = "Riyadh";
+                    if (user.RoleID == 1) user.Role = "Administrator";
+                    if (user.RoleID == 2) user.Role = "User";
                     users.Add(user);
                 }
                 reader.Close();

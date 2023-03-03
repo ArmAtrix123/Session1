@@ -13,9 +13,9 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}" Width="100" >Name</GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}" Width="100">Last name</GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Birthdate}" Width="50">Age</GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=RoleID}" Width="100">User Role</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Role}" Width="100">User Role</GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Email}" Width="200">Email Address</GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=OfficeID}" Width="100">Office</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Office}" Width="100">Office</GridViewColumn>
                 </GridView>
             </ListView.View>
             <ListView.ItemTemplate>
@@ -24,9 +24,9 @@
                         <TextBlock Text="{Binding Path=FirstName , StringFormat=' {0}' }"  Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
                         <TextBlock Text="{Binding Path=LastName , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
                         <TextBlock Text="{Binding Path=Birthdate , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=RoleID , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=Role , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
                         <TextBlock Text="{Binding Path=Email , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
-                        <TextBlock Text="{Binding Path=OfficeID , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="{Binding Path=Office , StringFormat=' {0}' }" Foreground="Black" TextAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
