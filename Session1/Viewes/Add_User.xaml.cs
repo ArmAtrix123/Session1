@@ -37,12 +37,22 @@ namespace Session1.Viewes
                 users.Clear();
                 users = new DataConnect().GetUsers();
             }
-            officeses = new DataConnect().GetOffices();
-            Change_Office.ItemsSource = officeses;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string office = Change_Office.SelectedValue.ToString();
+            int OfficeID = 0;
+            if (office == "System.Windows.Controls.ComboBoxItem: Abu Dhabi")
+                OfficeID = 1;
+            else if (office == "System.Windows.Controls.ComboBoxItem: Cairo")
+                OfficeID = 2;
+            else if (office == "System.Windows.Controls.ComboBoxItem: Bahrain")
+                OfficeID = 3;
+            else if (office == "System.Windows.Controls.ComboBoxItem: Doha")
+                OfficeID = 4;
+            else if (office == "System.Windows.Controls.ComboBoxItem: Riyadh")
+                OfficeID = 5;
             if (String.IsNullOrWhiteSpace(Email.Text) == true && String.IsNullOrWhiteSpace(FirstName.Text) == true && String.IsNullOrWhiteSpace(Last_Name.Text) == true && String.IsNullOrWhiteSpace(Change_Office.Text) == true && String.IsNullOrWhiteSpace(Birthdate.Text) == true && String.IsNullOrWhiteSpace(Password.Text) == true)
                 MessageBox.Show("Вы не заполнили какие-то поля \n Пожайлуста заполните хотя-бы одно");
             else

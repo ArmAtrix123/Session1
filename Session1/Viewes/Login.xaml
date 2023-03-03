@@ -14,6 +14,6 @@
         <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="209,286,0,0" VerticalAlignment="Top" Width="372" Height="26" BorderBrush="Black"/>
         <Button x:Name="login_btn" Content="Login" HorizontalAlignment="Left" Margin="223,355,0,0" VerticalAlignment="Top" Width="111" Background="White" Click="Login_Button"/>
         <Button Content="Exit" HorizontalAlignment="Left" Margin="446,355,0,0" VerticalAlignment="Top" Width="110" Background="White" Click="Exit_Button"/>
-        <Label x:Name="lblTime" Content="10" HorizontalAlignment="Left" Margin="371,344,0,0" VerticalAlignment="Top" Width="47" Height="38" FontSize="24"/>
+        <Label x:Name="lblTime" Content="" HorizontalAlignment="Left" Margin="368,346,0,0" VerticalAlignment="Top" Width="78" Height="38" FontSize="24"/>
     </Grid>
 </Window>

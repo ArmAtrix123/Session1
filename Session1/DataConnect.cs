@@ -69,10 +69,10 @@ namespace Session1
                 $"EXEC [dbo].[AddUser] '2','{user.Email}','{user.Password}','{user.FirstName}','{user.LastName}','{user.OfficeID}','{user.Birthdate}','1';";
             SqlCommand(command);
         }
-        public void Edit_User(Users user, int Id)
+        public void Edit_User(Users user)
         {
             string command = "USE Session1 " +
-                $"EXEC [dbo].[EditUser] '{Id}','{user.RoleID}','{user.Email}','{user.Password}','{user.FirstName}','{user.LastName}','{user.OfficeID}','{user.Birthdate}';";
+                $"EXEC [dbo].[Edit_User] '{user.RoleID}','{user.Email}','{user.Password}','{user.FirstName}','{user.LastName}','{user.OfficeID}','{user.Birthdate}','{user.Active}','{user.ID}';";
             SqlCommand(command);
         }
         public List<Countries> GetCountries()

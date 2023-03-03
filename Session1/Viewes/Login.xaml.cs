@@ -26,22 +26,39 @@ namespace Session1.Viewes
         public Login()
         {
             InitializeComponent();
+            TimerSec.Interval = TimeSpan.FromSeconds(1);
+            TimerSec.Tick += Reklama_Tick;
         }
+        DispatcherTimer TimerSec = new DispatcherTimer();
         int attempt = 0;
         int seconds = 10;
-        private void dtTicker(object sender, EventArgs e)
+        private void Reklama_Tick(object sender, EventArgs e)
         {
+
+            if (seconds == 0)
+            {
+                seconds = 10;
+                login_btn.IsEnabled = true;
+                lblTime.Visibility = Visibility.Hidden;
+                TimerSec.Stop();
+            }
+            lblTime.Content = seconds;
             seconds--;
-            lblTime.Content = seconds.ToString();
+
         }
         public void Login_Button(object sender, RoutedEventArgs e)
         {
+            attempt += 1;
             List<Users> users = new DataConnect().GetUsers();
             foreach (Users user in users)
             {
-                if (UserName.Text == user.Email)
+                if (UserName.Text == user.Email && Password.Password == user.Password)
                 {
-                    if (Password.Password == user.Password)
+                    if (user.Active == false)
+                    {
+                        MessageBox.Show("Вы заблокированы");
+                    }
+                    else
                     {
                         switch (user.RoleID)
                         {
@@ -60,15 +77,22 @@ namespace Session1.Viewes
                                 a1.Left = this.Left;
                                 this.Hide();
                                 a1.Show();
-                                break;             
+                                break;
                         }
                     }
                 } 
             }
+            if (attempt >= 3)
+            {
+                MessageBox.Show("Подождите 10 секунд до следующей попытки");
+                lblTime.Visibility = Visibility.Visible;
+                login_btn.IsEnabled = false;
+                TimerSec.Start();
+            }
         }
         private void Exit_Button(object sender, RoutedEventArgs e)
         {
-            Close();
+            Environment.Exit(1);
         }
     }
 }

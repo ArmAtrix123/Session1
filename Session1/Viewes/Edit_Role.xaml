@@ -14,11 +14,17 @@
         <TextBox x:Name="Email" HorizontalAlignment="Left" Height="26" Margin="325,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" BorderBrush="Black"/>
         <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="26" Margin="325,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" BorderBrush="Black"/>
         <TextBox x:Name="Last_Name" HorizontalAlignment="Left" Height="26" Margin="325,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" BorderBrush="Black"/>
-        <ComboBox x:Name="Change_Office" HorizontalAlignment="Left" Margin="325,223,0,0" VerticalAlignment="Top" Width="225" BorderBrush="Black"/>
+        <ComboBox x:Name="Change_Office" HorizontalAlignment="Left" Margin="325,223,0,0" VerticalAlignment="Top" Width="225" BorderBrush="Black">
+            <ComboBoxItem>Abu Dhabi</ComboBoxItem>
+            <ComboBoxItem>Cario</ComboBoxItem>
+            <ComboBoxItem>Bahrain</ComboBoxItem>
+            <ComboBoxItem>Doha</ComboBoxItem>
+            <ComboBoxItem>Riyadh</ComboBoxItem>
+        </ComboBox>
         <Label Content="Office" HorizontalAlignment="Left" Margin="231,299,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="User" HorizontalAlignment="Left" Margin="333,305,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Administrator" HorizontalAlignment="Left" Margin="333,336,0,0" VerticalAlignment="Top"/>
-        <Button Content="Apply" HorizontalAlignment="Left" Margin="283,378,0,0" VerticalAlignment="Top" Width="75"  BorderBrush="Black" Background="White"/>
+        <RadioButton x:Name="UserCheck" Content="User" HorizontalAlignment="Left" Margin="333,305,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="AdminCheck" Content="Administrator" HorizontalAlignment="Left" Margin="333,336,0,0" VerticalAlignment="Top"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="283,378,0,0" VerticalAlignment="Top" Width="75"  BorderBrush="Black" Background="White" Click="Button_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="466,378,0,0" VerticalAlignment="Top" Width="75" Background="White" BorderBrush="Black"/>
 
     </Grid>

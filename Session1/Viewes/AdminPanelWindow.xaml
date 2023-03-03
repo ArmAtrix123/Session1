@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AdminPanelWindow" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="Data_User" HorizontalAlignment="Left" Height="299" Margin="64,74,0,0" VerticalAlignment="Top" Width="657" Background="White">
+        <ListView x:Name="Data_User" HorizontalAlignment="Left" Height="299" Margin="64,74,0,0" VerticalAlignment="Top" Width="652" Background="White">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}" Width="100" >Name</GridViewColumn>
@@ -36,7 +36,7 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="0,30,0,0" VerticalAlignment="Top" Width="792" Background="Black"/>
         <Label Content="Office" HorizontalAlignment="Left" Margin="64,41,0,0" VerticalAlignment="Top" Width="41"/>
         <ComboBox HorizontalAlignment="Left" Margin="110,41,0,0" VerticalAlignment="Top" Width="120" BorderBrush="#FF9E9E9E"/>
-        <Button Content="Change Role" HorizontalAlignment="Left" Margin="64,382,0,0" VerticalAlignment="Top" Width="75" Background="White" Foreground="Black" BorderBrush="Black"/>
+        <Button Content="Change Role" HorizontalAlignment="Left" Margin="64,382,0,0" VerticalAlignment="Top" Width="75" Background="White" Foreground="Black" BorderBrush="Black" Click="Button_Click_2"/>
         <Button Content="Enable/Disable Login" HorizontalAlignment="Left" Margin="177,382,0,0" VerticalAlignment="Top" Width="119" Background="White" Foreground="Black" BorderBrush="Black" Click="Button_Click"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="22,224,0,0" VerticalAlignment="Top" Width="292" Background="Black" RenderTransformOrigin="0.5,0.5">
             <Border.RenderTransform>
